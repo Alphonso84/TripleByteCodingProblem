@@ -30,9 +30,12 @@ class Networking {
                 
 //                let jsonDecoder = JSONDecoder()
 //                let meowInfo = try jsonDecoder.decode(Array<MeowCards>.self, from: meowData)
-                var jsonData = try JSONSerialization.jsonObject(with: meowData, options: []) as! NSArray
+                let jsonData = try JSONSerialization.jsonObject(with: meowData, options: []) as? [Any]
                 
-                print(jsonData)
+            
+                //print(jsonData!)
+                MeowInfo = jsonData! as! [MeowCards]
+                print(MeowInfo)
             
             } catch {
                 

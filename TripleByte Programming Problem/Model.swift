@@ -14,9 +14,10 @@ import UIKit
 
 struct MeowCards {
     
-    var title: String
-    var timestamp: String
-    var image_url: String
     var description: String
+    var image_url: String
+    var timestamp: String
+    var title: String
+    
     
 }
