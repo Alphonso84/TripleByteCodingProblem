@@ -10,14 +10,11 @@ import Foundation
 import UIKit
 
 
-
-
 struct MeowCards {
-    
-    var description: String
-    var image_url: String
-    var timestamp: String
-    var title: String
-    
-    
+    var MeowInstance = ["description":String.self, "image_url":String.self, "timestamp":String.self, "title":String.self]
 }
+
+
+    
+    
+

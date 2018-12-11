@@ -28,15 +28,13 @@ class Networking {
             
             do {
                 
-//                let jsonDecoder = JSONDecoder()
-//                let meowInfo = try jsonDecoder.decode(Array<MeowCards>.self, from: meowData)
-                let jsonData = try JSONSerialization.jsonObject(with: meowData, options: []) as? [Any]
+                //                let jsonDecoder = JSONDecoder()
+                //                let meowInfo = try jsonDecoder.decode(Array<MeowCards>.self, from: meowData)
+                let jsonData = try JSONSerialization.jsonObject(with: meowData, options: [])
                 
-            
-                //print(jsonData!)
-                MeowInfo = jsonData! as! [MeowCards]
-                print(MeowInfo)
-            
+               
+                MeowInfo = jsonData as! [MeowCards]
+                
             } catch {
                 
                 print(error)
