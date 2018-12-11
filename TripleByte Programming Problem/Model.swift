@@ -10,19 +10,13 @@ import Foundation
 import UIKit
 
 
-var MeowInfo = [MeowCards]()
 
-struct MeowCards: Decodable {
+
+struct MeowCards {
     
     var title: String
-    var time: String
-    var image: String
+    var timestamp: String
+    var image_url: String
     var description: String
     
-    enum CodingKeys: String, CodingKey {
-        case title = "title"
-        case time = "time"
-        case image = "image"
-        case description = "description"
-    }
 }

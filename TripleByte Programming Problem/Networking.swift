@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+var MeowInfo = [MeowCards]()
+
 class Networking {
-
+    
     var baseURL = URL(string: "https://chex-triplebyte.herokuapp.com/api/cats?page=0")
-
+    
+    
+    
+    
     func getMeowItems() {
         
         let session = URLSession.shared
@@ -23,16 +28,18 @@ class Networking {
             
             do {
                 
-                let jsonDecoder = JSONDecoder()
-                let meowInfo = try jsonDecoder.decode(Array<MeowInfo>.self, from: meowData)
+//                let jsonDecoder = JSONDecoder()
+//                let meowInfo = try jsonDecoder.decode(Array<MeowCards>.self, from: meowData)
+                var jsonData = try JSONSerialization.jsonObject(with: meowData, options: []) as! NSArray
                 
-                print(meowInfo)
-            } catch {
+                print(jsonData)
             
-            print(error)
+            } catch {
+                
+                print(error)
+            }
         }
-    }
         task.resume()
-
-}
+        
+    }
 }
