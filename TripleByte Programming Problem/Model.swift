@@ -8,3 +8,21 @@
 
 import Foundation
 import UIKit
+
+
+var MeowInfo = [MeowCards]()
+
+struct MeowCards: Decodable {
+    
+    var title: String
+    var time: String
+    var image: String
+    var description: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title = "title"
+        case time = "time"
+        case image = "image"
+        case description = "description"
+    }
+}
